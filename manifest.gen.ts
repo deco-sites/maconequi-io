@@ -5,29 +5,30 @@
 import * as $$$$$$0 from "./sections/Category/CategoryBanner.tsx";
 import * as $$$$$$1 from "./sections/Category/CategoryList.tsx";
 import * as $$$$$$2 from "./sections/Content/Benefits.tsx";
-import * as $$$$$$3 from "./sections/Content/Faq.tsx";
-import * as $$$$$$4 from "./sections/Content/Logos.tsx";
-import * as $$$$$$5 from "./sections/Content/SectionInfo.tsx";
-import * as $$$$$$6 from "./sections/Content/Testimonials.tsx";
-import * as $$$$$$7 from "./sections/Footer/Footer.tsx";
-import * as $$$$$$8 from "./sections/Header/Header.tsx";
-import * as $$$$$$9 from "./sections/Header/HeaderMaconequi.tsx";
-import * as $$$$$$10 from "./sections/Images/BannerGrid.tsx";
-import * as $$$$$$11 from "./sections/Images/Carousel.tsx";
-import * as $$$$$$12 from "./sections/Images/ImageGallery.tsx";
-import * as $$$$$$13 from "./sections/Images/ShoppableBanner.tsx";
-import * as $$$$$$14 from "./sections/Links/LinkTree.tsx";
-import * as $$$$$$15 from "./sections/Links/Shortcuts.tsx";
-import * as $$$$$$16 from "./sections/Miscellaneous/CampaignTimer.tsx";
-import * as $$$$$$17 from "./sections/Miscellaneous/CookieConsent.tsx";
-import * as $$$$$$18 from "./sections/Newsletter/Newsletter.tsx";
-import * as $$$$$$19 from "./sections/Product/ProductDetails.tsx";
-import * as $$$$$$20 from "./sections/Product/ProductShelf.tsx";
-import * as $$$$$$21 from "./sections/Product/SearchResult.tsx";
-import * as $$$$$$22 from "./sections/Product/Wishlist.tsx";
-import * as $$$$$$23 from "./sections/Social/InstagramPosts.tsx";
-import * as $$$$$$24 from "./sections/Social/WhatsApp.tsx";
-import * as $$$$$$25 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$3 from "./sections/Content/CardsGrid.tsx";
+import * as $$$$$$4 from "./sections/Content/Faq.tsx";
+import * as $$$$$$5 from "./sections/Content/Logos.tsx";
+import * as $$$$$$6 from "./sections/Content/SectionInfo.tsx";
+import * as $$$$$$7 from "./sections/Content/Testimonials.tsx";
+import * as $$$$$$8 from "./sections/Footer/Footer.tsx";
+import * as $$$$$$9 from "./sections/Header/Header.tsx";
+import * as $$$$$$10 from "./sections/Header/HeaderMaconequi.tsx";
+import * as $$$$$$11 from "./sections/Images/BannerGrid.tsx";
+import * as $$$$$$12 from "./sections/Images/Carousel.tsx";
+import * as $$$$$$13 from "./sections/Images/ImageGallery.tsx";
+import * as $$$$$$14 from "./sections/Images/ShoppableBanner.tsx";
+import * as $$$$$$15 from "./sections/Links/LinkTree.tsx";
+import * as $$$$$$16 from "./sections/Links/Shortcuts.tsx";
+import * as $$$$$$17 from "./sections/Miscellaneous/CampaignTimer.tsx";
+import * as $$$$$$18 from "./sections/Miscellaneous/CookieConsent.tsx";
+import * as $$$$$$19 from "./sections/Newsletter/Newsletter.tsx";
+import * as $$$$$$20 from "./sections/Product/ProductDetails.tsx";
+import * as $$$$$$21 from "./sections/Product/ProductShelf.tsx";
+import * as $$$$$$22 from "./sections/Product/SearchResult.tsx";
+import * as $$$$$$23 from "./sections/Product/Wishlist.tsx";
+import * as $$$$$$24 from "./sections/Social/InstagramPosts.tsx";
+import * as $$$$$$25 from "./sections/Social/WhatsApp.tsx";
+import * as $$$$$$26 from "./sections/Theme/Theme.tsx";
 import * as $$$$$$$$$$$0 from "./apps/site.ts";
 
 const manifest = {
@@ -35,31 +36,32 @@ const manifest = {
     "deco-sites/maconequi-io/sections/Category/CategoryBanner.tsx": $$$$$$0,
     "deco-sites/maconequi-io/sections/Category/CategoryList.tsx": $$$$$$1,
     "deco-sites/maconequi-io/sections/Content/Benefits.tsx": $$$$$$2,
-    "deco-sites/maconequi-io/sections/Content/Faq.tsx": $$$$$$3,
-    "deco-sites/maconequi-io/sections/Content/Logos.tsx": $$$$$$4,
-    "deco-sites/maconequi-io/sections/Content/SectionInfo.tsx": $$$$$$5,
-    "deco-sites/maconequi-io/sections/Content/Testimonials.tsx": $$$$$$6,
-    "deco-sites/maconequi-io/sections/Footer/Footer.tsx": $$$$$$7,
-    "deco-sites/maconequi-io/sections/Header/Header.tsx": $$$$$$8,
-    "deco-sites/maconequi-io/sections/Header/HeaderMaconequi.tsx": $$$$$$9,
-    "deco-sites/maconequi-io/sections/Images/BannerGrid.tsx": $$$$$$10,
-    "deco-sites/maconequi-io/sections/Images/Carousel.tsx": $$$$$$11,
-    "deco-sites/maconequi-io/sections/Images/ImageGallery.tsx": $$$$$$12,
-    "deco-sites/maconequi-io/sections/Images/ShoppableBanner.tsx": $$$$$$13,
-    "deco-sites/maconequi-io/sections/Links/LinkTree.tsx": $$$$$$14,
-    "deco-sites/maconequi-io/sections/Links/Shortcuts.tsx": $$$$$$15,
+    "deco-sites/maconequi-io/sections/Content/CardsGrid.tsx": $$$$$$3,
+    "deco-sites/maconequi-io/sections/Content/Faq.tsx": $$$$$$4,
+    "deco-sites/maconequi-io/sections/Content/Logos.tsx": $$$$$$5,
+    "deco-sites/maconequi-io/sections/Content/SectionInfo.tsx": $$$$$$6,
+    "deco-sites/maconequi-io/sections/Content/Testimonials.tsx": $$$$$$7,
+    "deco-sites/maconequi-io/sections/Footer/Footer.tsx": $$$$$$8,
+    "deco-sites/maconequi-io/sections/Header/Header.tsx": $$$$$$9,
+    "deco-sites/maconequi-io/sections/Header/HeaderMaconequi.tsx": $$$$$$10,
+    "deco-sites/maconequi-io/sections/Images/BannerGrid.tsx": $$$$$$11,
+    "deco-sites/maconequi-io/sections/Images/Carousel.tsx": $$$$$$12,
+    "deco-sites/maconequi-io/sections/Images/ImageGallery.tsx": $$$$$$13,
+    "deco-sites/maconequi-io/sections/Images/ShoppableBanner.tsx": $$$$$$14,
+    "deco-sites/maconequi-io/sections/Links/LinkTree.tsx": $$$$$$15,
+    "deco-sites/maconequi-io/sections/Links/Shortcuts.tsx": $$$$$$16,
     "deco-sites/maconequi-io/sections/Miscellaneous/CampaignTimer.tsx":
-      $$$$$$16,
-    "deco-sites/maconequi-io/sections/Miscellaneous/CookieConsent.tsx":
       $$$$$$17,
-    "deco-sites/maconequi-io/sections/Newsletter/Newsletter.tsx": $$$$$$18,
-    "deco-sites/maconequi-io/sections/Product/ProductDetails.tsx": $$$$$$19,
-    "deco-sites/maconequi-io/sections/Product/ProductShelf.tsx": $$$$$$20,
-    "deco-sites/maconequi-io/sections/Product/SearchResult.tsx": $$$$$$21,
-    "deco-sites/maconequi-io/sections/Product/Wishlist.tsx": $$$$$$22,
-    "deco-sites/maconequi-io/sections/Social/InstagramPosts.tsx": $$$$$$23,
-    "deco-sites/maconequi-io/sections/Social/WhatsApp.tsx": $$$$$$24,
-    "deco-sites/maconequi-io/sections/Theme/Theme.tsx": $$$$$$25,
+    "deco-sites/maconequi-io/sections/Miscellaneous/CookieConsent.tsx":
+      $$$$$$18,
+    "deco-sites/maconequi-io/sections/Newsletter/Newsletter.tsx": $$$$$$19,
+    "deco-sites/maconequi-io/sections/Product/ProductDetails.tsx": $$$$$$20,
+    "deco-sites/maconequi-io/sections/Product/ProductShelf.tsx": $$$$$$21,
+    "deco-sites/maconequi-io/sections/Product/SearchResult.tsx": $$$$$$22,
+    "deco-sites/maconequi-io/sections/Product/Wishlist.tsx": $$$$$$23,
+    "deco-sites/maconequi-io/sections/Social/InstagramPosts.tsx": $$$$$$24,
+    "deco-sites/maconequi-io/sections/Social/WhatsApp.tsx": $$$$$$25,
+    "deco-sites/maconequi-io/sections/Theme/Theme.tsx": $$$$$$26,
   },
   "apps": {
     "deco-sites/maconequi-io/apps/site.ts": $$$$$$$$$$$0,
