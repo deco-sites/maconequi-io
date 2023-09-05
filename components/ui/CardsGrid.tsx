@@ -1,33 +1,43 @@
-// import Image from "deco-sites/std/components/Image.tsx";
-// import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
+import Image from "apps/website/components/Image.tsx";
+import type { ImageWidget } from "apps/admin/widgets.ts";
 
-function Card() {
+export interface CardProps {
+  icone: ImageWidget;
+  label: string;
+}
+
+export interface Props {
+  cards: CardProps[];
+}
+
+function Card({ icone, label }: CardProps) {
   return (
-    <div class="flex flex-col justify-center items-center w-[99px] h-[99px] bg-red/10 ">
+    <div class="flex flex-col justify-center items-center w-[99px] h-[99px] bg-red/10 text-center text-sm px-1.5 py-2 gap-1.5">
       {
-        /* <Image
-                width={26}
-                height={26}
-                alt={""}
-                src={""}
-                class="max-w-full max-h-full"
-                 /> */
+        <Image
+          width={26}
+          height={26}
+          alt={""}
+          src={icone}
+          class="max-w-full max-h-full"
+        />
       }
       <span>
-        nome provisório
+        {label}
       </span>
     </div>
   );
 }
 
-export default function CardsGrid() {
+export default function CardsGrid({ cards }: Props) {
   return (
     <section class="flex w-full h-full justify-center items-center">
-      <div class="flex flex-col w-full h-full justify-center items-center gap-6">
+      <div class="flex flex-col lg:flex-row w-full h-full justify-center items-center gap-6 ">
         <h1>
           Compre por <b>Categoria</b>
         </h1>
-        <div class="grid grid-cols-3 gap-3 ">
+        <div class="grid grid-cols-3 md:flex md:flex-row gap-3 my-4">
+          {cards.map((item) => <Card {...item} />)}
         </div>
       </div>
     </section>
