@@ -47,9 +47,9 @@ export default function Banners({ banners, title }: Props) {
         </div>
         <div
           id={id}
-          class="lg:hidden justify-center items-center grid pb-2 grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px] mb-20"
+          class="lg:hidden pl-6 justify-center items-center grid pb-2 grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px] mb-20"
         >
-          <Slider class="flex snap-mandatory pl-3 scroll-smooth scrollbar overflow-x-scroll w-full col-span-full row-span-full pb-8 gap-6">
+          <Slider class="flex snap-mandatory pl-1 scroll-smooth scrollbar overflow-x-scroll w-full col-span-full row-span-full pb-8 gap-6">
             {banners?.map((banner, index) => (
               <Slider.Item
                 index={index}
