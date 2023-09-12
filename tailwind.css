@@ -37,3 +37,22 @@
     --dot-progress: 100%
   }
 }
+
+@layer utilities{
+  .scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    left: -50px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #E0E0E0;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #000000;
+    border-radius: 100vh;
+  
+  }
+}
