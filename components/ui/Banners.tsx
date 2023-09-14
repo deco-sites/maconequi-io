@@ -31,7 +31,10 @@ export function Banner({ image, title, subTitle }: BannerProps) {
       <h1 class="pt-4">
         <b dangerouslySetInnerHTML={{ __html: title }} />
       </h1>
-      <span class="pt-2" dangerouslySetInnerHTML={{ __html: subTitle }} />
+      <span
+        class="text-center"
+        dangerouslySetInnerHTML={{ __html: subTitle }}
+      />
     </div>
   );
 }
@@ -43,14 +46,14 @@ export default function Banners({ banners, title }: Props) {
       <div class="container flex flex-col justify-center items-center gap-10 pt-5">
         {/*add max width*/}
         <h1 class="" dangerouslySetInnerHTML={{ __html: title }} />
-        <div class="lg:grid hidden lg:grid-cols-4 gap-x-11 justify-center items-center">
+        <div class="lg:grid hidden lg:grid-cols-4 gap-x-11 justify-start items-start">
           {banners.map((item) => <Banner {...item} />)}
         </div>
         <div
           id={id}
-          class="lg:hidden px-6 justify-center items-center grid pb-2 grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px] mb-20"
+          class="lg:hidden px-6 items-start grid pb-2 grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px] mb-20"
         >
-          <Slider class="flex snap-mandatory pl-1 scroll-smooth scrollbar overflow-x-scroll w-full col-span-full row-span-full pb-8 gap-6">
+          <Slider class="flex items-start snap-mandatory pl-1 scroll-smooth scrollbar overflow-x-scroll w-full col-span-full row-span-full pb-8 gap-6">
             {banners?.map((banner, index) => (
               <Slider.Item
                 index={index}
