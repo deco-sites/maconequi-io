@@ -1,5 +1,5 @@
 import Image from "apps/website/components/Image.tsx";
-import type { ImageWidget } from "apps/admin/widgets.ts";
+import type { HTMLWidget, ImageWidget } from "apps/admin/widgets.ts";
 
 export interface CardProps {
   icone: ImageWidget;
@@ -8,6 +8,7 @@ export interface CardProps {
 
 export interface Props {
   cards: CardProps[];
+  title: HTMLWidget;
 }
 
 function Card({ icone, label }: CardProps) {
@@ -29,13 +30,12 @@ function Card({ icone, label }: CardProps) {
   );
 }
 
-export default function CardsGrid({ cards }: Props) {
+export default function CardsGrid({ cards, title }: Props) {
   return (
     <section class="flex w-full h-full justify-center items-center">
       <div class="flex flex-col lg:flex-row w-full h-full justify-center items-center gap-6 ">
-        <h1>
-          Compre por <b>Categoria</b>
-        </h1>
+        <h1 dangerouslySetInnerHTML={{ __html: title }} />
+
         <div class="grid grid-cols-3 md:flex md:flex-row gap-3 my-4">
           {cards.map((item) => <Card {...item} />)}
         </div>
