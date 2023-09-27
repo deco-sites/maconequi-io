@@ -9,6 +9,8 @@ export interface BannerProps {
   image: ImageWidget;
   title: HTMLWidget;
   subTitle: HTMLWidget;
+  isBigger?: boolean;
+  description: string;
 }
 
 export interface Props {
@@ -16,15 +18,22 @@ export interface Props {
   title: HTMLWidget;
 }
 
-export function Banner({ image, title, subTitle }: BannerProps) {
+export function Banner(
+  { image, title, subTitle, isBigger, description }: BannerProps,
+) {
+  const isBiggerActive = isBigger
+    ? "max-w-[642px] lg:max-h-[414px]"
+    : "max-w-[292px] lg:max-h-[375px]";
   return (
-    <div className="flex flex-col items-center justify-center max-w-[292px] lg:max-h-[375px] ">
+    <div
+      className={`flex flex-col items-center justify-center ${isBiggerActive}`}
+    >
       {/*add gap do title p subtitle*/}
 
       <Image
-        width={292}
-        height={292}
-        alt={""}
+        width={isBigger ? 642 : 292}
+        height={isBigger ? 414 : 292}
+        alt={description}
         src={image}
         class="max-w-full max-h-full border-3 rounded-md border-[#E0E0E0]"
       />
@@ -42,11 +51,11 @@ export function Banner({ image, title, subTitle }: BannerProps) {
 export default function Banners({ banners, title }: Props) {
   const id = `banner-${useId()}`;
   return (
-    <section>
-      <div class="container flex flex-col justify-center items-center gap-10 pt-5">
+    <section class="mt-4">
+      <div class="container flex flex-col justify-center items-center mb-6 pb-3 gap-10 pt-5">
         {/*add max width*/}
-        <h1 class="" dangerouslySetInnerHTML={{ __html: title }} />
-        <div class="lg:grid hidden lg:grid-cols-4 gap-x-11 justify-start items-start">
+        <h1 class="pb-2" dangerouslySetInnerHTML={{ __html: title }} />
+        <div class="lg:flex hidden gap-x-11 justify-center items-center">
           {banners.map((item) => <Banner {...item} />)}
         </div>
         <div
