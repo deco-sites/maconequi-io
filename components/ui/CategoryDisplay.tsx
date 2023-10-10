@@ -7,8 +7,6 @@ import type { HTMLWidget } from "apps/admin/widgets.ts";
 
 export interface BannerProps {
   image: ImageWidget;
-  title: HTMLWidget;
-  subTitle: HTMLWidget;
   isBigger?: boolean;
   description: string;
 }
@@ -19,31 +17,27 @@ export interface Props {
 }
 
 export function Banner(
-  { image, title, subTitle, isBigger, description }: BannerProps,
+  { image, isBigger, description }: BannerProps,
 ) {
   const isBiggerActive = isBigger
-    ? "max-w-[642px] lg:max-h-[414px] pt-3"
-    : "max-w-[292px] lg:max-h-[375px]";
+    ? "max-w-[414px] lg:max-h-[204px]"
+    : "max-w-[375px] lg:max-h-[204px]";
   return (
     <div
-      className={`flex flex-col items-center justify-center ${isBiggerActive}`}
+      className={`flex flex-col items-center justify-center ${isBiggerActive} lg:max-h-[204px] `}
     >
       {/*add gap do title p subtitle*/}
 
       <Image
-        width={isBigger ? 642 : 292}
-        height={isBigger ? 414 : 292}
+        width={isBigger ? 642 : 204}
+        height={isBigger ? 414 : 204}
         alt={description}
         src={image}
-        class="max-w-full max-h-full border-3 rounded-md border-[#E0E0E0]"
+        class="max-w-full max-h-full rounded-tl-[16px] rounded-br-[16px] lg:max-h-[204px] "
       />
-      <h1 class="pt-4">
-        <b dangerouslySetInnerHTML={{ __html: title }} />
-      </h1>
-      <span
-        class="text-center"
-        dangerouslySetInnerHTML={{ __html: subTitle }}
-      />
+      <button class="border-[3px] rounded-[6px] border-red text-red mt-3 flex items-center justify-center h-[42px] w-[100px] ">
+        Confira
+      </button>
     </div>
   );
 }
@@ -52,9 +46,9 @@ export default function Banners({ banners, title }: Props) {
   const id = `banner-${useId()}`;
   return (
     <section class="mt-4">
-      <div class="container flex flex-col justify-center items-center mb-6 gap-10 pt-5">
+      <div class="container flex flex-col justify-center items-center lg:mb-6 mb-2 lg:pb-3 gap-10 pt-5">
         {/*add max width*/}
-        <h1 class="pb-2 lg:pb-4" dangerouslySetInnerHTML={{ __html: title }} />
+        <h1 class="pb-2" dangerouslySetInnerHTML={{ __html: title }} />
         <div class="lg:flex hidden gap-x-11 justify-center items-center">
           {banners.map((item) => <Banner {...item} />)}
         </div>
@@ -66,13 +60,12 @@ export default function Banners({ banners, title }: Props) {
             {banners?.map((banner, index) => (
               <Slider.Item
                 index={index}
-                class="carousel-item last:pr-3 w-[310px]"
+                class="carousel-item last:pr-3 w-[204px]"
               >
                 <Banner {...banner} />
               </Slider.Item>
             ))}
           </Slider>
-
           <SliderJS rootId={id} />
         </div>
       </div>
