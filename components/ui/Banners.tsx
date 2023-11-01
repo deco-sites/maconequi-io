@@ -41,7 +41,7 @@ export function Banner(
         <b dangerouslySetInnerHTML={{ __html: title }} />
       </h1>
       <span
-        class="text-center"
+        class="text-center min-h-[52px]"
         dangerouslySetInnerHTML={{ __html: subTitle }}
       />
     </div>
